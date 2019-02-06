@@ -1,5 +1,7 @@
 <?php 
 
+// Connecting to database////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 include_once 'user.php';
 
 $conn = mysqli_connect($servername, $username, $password, $database);
@@ -8,10 +10,14 @@ if (!$conn) {
     die("connection failed: " . mysqli_connect_error());
 }
 
+// Posting data to databse///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 $Username = $_POST['Username'];
 $Password = $_POST['Password'];
 
 $sql = "INSERT INTO rooms (Username, Password) VALUES ('$Username', '$Password')";
+
+// checking if info is inserted correctly////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 if (!mysqli_query($conn, $sql)){
     echo 'Not Inserted';
@@ -19,7 +25,7 @@ if (!mysqli_query($conn, $sql)){
     echo '';
 }
 
-header("refresh: 0;welcome.php")
+header("refresh: 0;/welcome.php")
     
 
 

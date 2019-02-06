@@ -1,0 +1,87 @@
+
+/* general style layout for webpage/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+html{
+    scroll-behavior: smooth;
+    padding: 1%;
+}
+
+body{
+    padding: 1%;
+    margin: 0 auto;
+    background-image: url(/img/dubai2.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* container styling////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.container{
+    padding: 1%;
+    margin: 0 auto;  
+    text-align: center;
+    max-width: 70%;
+}
+
+.sub-container{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto auto auto auto;
+    grid-gap: 10px;
+    max-width: 90%;
+    text-align: center;
+}
+
+/* implimentation of css grid///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+.grid{
+    padding: 1%;
+    background-color: rgba(255, 255, 255, 0.85);
+    box-shadow: 0px 0px 6px 6px rgb(15, 15, 15, 0.3);
+    border-radius: 1%;
+}
+
+#sq1{
+    height: 150px;
+}
+#sq2{
+    padding-top: 5%;
+    padding-left: 2%;
+    grid-row-end: span 4;
+    height: 680px;
+    text-align: left;
+}
+#sq3{
+    grid-row-end: span 4;
+    height: 430px;
+}
+#sq4{
+    height: 150px;
+}
+
+.img{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 6px 6px rgb(15, 15, 15, 0.15);
+}
+h3{
+    float: right;
+    padding-right: 20px;
+    font-size: 20px;
+    font-family: 'Nunito';
+}
+
+
+
+
+
+
+
+
+
+
+
+
