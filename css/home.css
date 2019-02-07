@@ -47,11 +47,11 @@ body{
     height: 150px;
 }
 #sq2{
-    padding-top: 5%;
-    padding-left: 2%;
+    padding-top: 3%;
     grid-row-end: span 4;
     height: 680px;
     text-align: left;
+    display: grid;
 }
 #sq3{
     grid-row-end: span 4;
@@ -63,16 +63,46 @@ body{
 
 .img{
     width: 150px;
-    height: 150px;
+    height:150px;
     border-radius: 10px;
-    box-shadow: 0px 0px 6px 6px rgb(15, 15, 15, 0.15);
+    box-shadow: 0px 0px 6px 6px rgb(15, 15, 15, 0.2);
 }
 h3{
-    float: right;
-    padding-right: 20px;
     font-size: 20px;
     font-family: 'Nunito';
 }
+
+/* content for nested micro grid////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+.mini{
+    margin: 0 auto;
+    padding: 1%;
+    display: grid;
+    width: 97%;
+    grid-template-rows: auto auto auto auto;
+    border-bottom: 1px solid;
+}
+
+#smallgrid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+#text{
+    position: relative;
+    top: 25%;
+    right: 20%;
+}
+#block3{
+    position: relative;
+    top: 5%;
+    font-size: 18px;
+    font-family: 'Nunito';
+}
+#mini1:hover, #mini2:hover, #mini3:hover, #mini4:hover{
+    box-shadow: 0px 6px 6px 0px rgb(15, 15, 15, 0.3);
+    z-index: 1;
+}
+
+
 
 
 

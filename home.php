@@ -21,13 +21,57 @@
 
         <div class="grid" id="sq2">
 
-            <img class="img" src="img/hotel1.jpg" alt="hotel1"><h3>The Summer Hotel</h3><br><hr>
+            <div class="mini" id="mini1">
 
-            <img class="img" src="img/hotel2.jpg" alt="hotel2"><h3>The Autumn Hotel</h3><br><hr>
+                <div id="smallgrid">
+                    <div id="block1"><img class="img" src="img/hotel1.jpg" alt="hotel1"></div>
+                    <div id="text">jhiuhiufhieriegejgbir<br>
+                        fweohfuwhfuhwfbsabb<br>
+                        bdegygwyuygdd
+                    </div>
+                    <div id="block3"><span style="color: rgb(109, 59, 245)">The Summer Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R250</span> per night</div>
+                </div>
 
-            <img class="img" src="img/hotel3.jpg" alt="hotel3"><h3>The Spring Hotel</h3><br><hr>
+            </div>
 
-            <img class="img" src="img/hotel4.jpg" alt="hotel4"><h3>The Winter Hotel</h3>
+            <div class="mini" id="mini2">
+
+                <div id="smallgrid">
+                    <div id="block1"><img class="img" src="img/hotel2.jpg" alt="hotel2"></div>
+                    <div id="text">jhiuhiufhieriegejgbir<br>
+                        fweohfuwhfuhwfbsabb<br>
+                        bdegygwyuygdd
+                    </div>
+                    <div id="block3"><span style="color: rgb(109, 59, 245)">The Winter Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R350</span> per night</div>
+                </div>
+
+            </div>
+
+            <div class="mini" id="mini3">
+
+                <div id="smallgrid">
+                    <div id="block1"><img class="img" src="img/hotel3.jpg" alt="hotel3"></div>
+                        <div id="text">jhiuhiufhieriegejgbir<br>
+                        fweohfuwhfuhwfbsabb<br>
+                        bdegygwyuygdd
+                        </div>
+                    <div id="block3"><span style="color: rgb(109, 59, 245)">The Spring Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R450</span> per night</div>
+                </div>
+
+            </div>
+
+            <div class="mini" id="mini4">
+
+                <div id="smallgrid">
+                    <div id="block1"><img class="img" src="img/hotel4.jpg" alt="hotel4"></div>
+                    <div id="text">jhiuhiufhieriegejgbir<br>
+                        fweohfuwhfuhwfbsabb<br>
+                        bdegygwyuygdd
+                    </div>
+                    <div id="block3"><span style="color: rgb(109, 59, 245)">The Autumn Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R550</span> per night</div>
+                </div>
+
+            </div>
 
         </div>
 

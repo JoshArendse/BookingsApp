@@ -17,7 +17,6 @@ header("refresh: 3;index.php");
 </head>
 <body>
 
-
 <h1>Welcome!</h1>
     
 </body>
