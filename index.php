@@ -18,13 +18,13 @@
     <div class="logcont">
         <h3>Don't tell Booking</h3>
 
-        <form action="" method="post" value="post">
+        <form action="connect2.php" method="post" value="post">
 
             <p class="p"><img src="img/email.png" alt="email"> Username:</p>
-            <input class="mail" type="text" placeholder="John54" required><br><br>
+            <input class="mail" type="text" name="user" placeholder="John54" required><br><br>
             <p class="p"><img src="img/look.png" alt="look"> Password:</p>
-            <input class="pass" type="password" placeholder="password" required><br><br>
-            <button type="submit" method="submit" value="submit">Login</button><br>
+            <input class="pass" type="password" name="pass" placeholder="password" required><br><br>
+            <button type="submit" method="submit" value="submit" name="login">Login</button><br>
 
         </form>
         <p>Not Registered? Sign up <a href="/register.php">here</a></p>

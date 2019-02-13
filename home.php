@@ -1,3 +1,10 @@
+<?php 
+
+session_start();
+$user = $_SESSION['user'];
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,18 +13,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/home.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Nunito|Oswald" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Karla|Nunito" rel="stylesheet">
     <title>Don't Tell</title>
 </head>
 <body>
 
+    <nav>
+        <ul>
+            <li><button type="submit" method="submit" value="submit">Login</button></li>
+            <li><button type="submit" method="submit" value="submit">Register</button></li>
+        </ul>
+    </nav>
+
+<!-- main container////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
 <div class="container">
 
-    <h1>Welcome to the Don't Tell booking form</h1>
+<!-- implimented subcontainer for responsive grid//////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
     <div class="sub-container">
         
+    <!-- quadrant 1 containing profile information/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+
         <div class="grid" id="sq1">1</div>
+
+    <!-- quadrant two containing microgrid selector for the 4 hotels///////////////////////////////////////////////////////////////////////////////////////////////// -->
 
         <div class="grid" id="sq2">
 
@@ -75,8 +95,53 @@
 
         </div>
 
-        <div class="grid" id="sq3">3</div>
-        <div class="grid" id="sq4">4</div>
+        <!-- quadrant 3 containg checkin and check out dates with miscellaneuos feature/s /////////////////////////////////////////////////////////////////////////// -->
+
+        <div class="grid" id="sq3">
+
+            <form action="">
+
+                <label for="date">Check-in:</label><br>
+                <input type="date" min="2019-02-14" max="2019-03-14"><br><br>
+
+                <label for="date">Check-out:</label><br>
+                <input type="date" min="2019-02-15" max="2019-03-15"><br><br>
+
+                <label for="no-of-adults">Number of Adults:</label>
+                <select>
+                    <option value="1" selected>1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select><br><br>
+                    
+                <label for="no-of-Kids">Number of Kids:</label>
+                <select style="margin-left: 4.5%">
+                    <option value="0" selected>0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select><br><br>
+
+                <input type="checkbox" id="box">
+                <label for="box" class="box">Travelling for work?</label>
+
+
+                
+            </form>
+
+        </div>
+
+        <!-- quadrant 4 miscellaneuos features/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
+
+        <div class="grid" id="sq4">
+
+            <input type="checkbox" id="box-2">
+            <label for="box-2" class="box">Would you like FREE wifi?</label>
+
+            <input type="checkbox" id="box-3">
+            <label for="box-3" class="box">Would like to use underground parking?</label>
+
+        </div>
 
     </div>
 

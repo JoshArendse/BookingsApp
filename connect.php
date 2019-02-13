@@ -17,7 +17,8 @@ $Password = $_POST['Password'];
 
 $sql = "INSERT INTO rooms (Username, Password) VALUES ('$Username', '$Password')";
 
-// checking if info is inserted correctly////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+// checking if info is inserted correctly////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 if (!mysqli_query($conn, $sql)){
     echo 'Not Inserted';
@@ -27,6 +28,4 @@ if (!mysqli_query($conn, $sql)){
 
 header("refresh: 0;/welcome.php")
     
-
-
 ?>
