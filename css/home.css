@@ -17,6 +17,10 @@ body{
 
 nav{
     background-color: rgba(109, 59, 245,0.85);
+    background-image: url(/img/logo.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    background-size: 10% 50%;
     box-shadow: 0px 6px 6px 0px rgb(15, 15, 15, 0.3);
     height: 50px;
     width: 100%;
@@ -29,7 +33,7 @@ nav{
 nav > ul > li{
     display: inline;
     text-decoration: none;
-    padding-right: 2%;
+    padding-right: 1%;
 }
 
 button{
@@ -75,7 +79,9 @@ button:active{
 }
 
 #sq1{
-    height: 150px;
+    font-family: 'Karla';
+    padding-top: 3%;
+    height: 120px;
 }
 #sq2{
     padding-top: 3%;

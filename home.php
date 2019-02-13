@@ -35,7 +35,11 @@ $user = $_SESSION['user'];
         
     <!-- quadrant 1 containing profile information/////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
 
-        <div class="grid" id="sq1">1</div>
+        <div class="grid" id="sq1">
+
+            <?php echo "You are now logged in as ~". $user = $_SESSION['user']; ?>
+
+        </div>
 
     <!-- quadrant two containing microgrid selector for the 4 hotels///////////////////////////////////////////////////////////////////////////////////////////////// -->
 
