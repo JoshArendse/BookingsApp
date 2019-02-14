@@ -7,7 +7,7 @@ html{
 
 body{
     margin: 0 auto;
-    background-image: url(/img/dubai2.jpg);
+    background-image: url(/img/dubai3.jpg);
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,11 +16,11 @@ body{
 /* styling for nav//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 nav{
-    background-color: rgba(109, 59, 245,0.85);
+    background-color: rgba(109, 59, 245,0.9);
     background-image: url(/img/logo.png);
     background-position: left;
     background-repeat: no-repeat;
-    background-size: 10% 50%;
+    background-size: 17% 100%;
     box-shadow: 0px 6px 6px 0px rgb(15, 15, 15, 0.3);
     height: 50px;
     width: 100%;
@@ -33,10 +33,21 @@ nav{
 nav > ul > li{
     display: inline;
     text-decoration: none;
-    padding-right: 1%;
+    padding-right: 0.8%;
 }
 
-button{
+.logout{
+    cursor: pointer;
+    border: 1px solid rgba(15, 15, 15, 0.1);
+    border-radius: 10px;
+    width:17%;
+    height: 25px;
+    background-color: rgb(3, 3, 3, 0.9);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+button {
+    cursor: pointer;
     border: 1px solid rgba(15, 15, 15, 0.1);
     border-radius: 10px;
     width: 4.5%;
@@ -44,7 +55,7 @@ button{
     background-color: rgb(3, 3, 3, 0.9);
     color: rgba(255, 255, 255, 0.8);
 }
-button:active{
+button:active, .logout:active{
     -moz-box-shadow: inset 0px 0px 10px 10px rgba(255, 255, 255, 0.15);
     -webkit-box-shadow: inset 0px 0px 10px 10px rgba(255, 255, 255, 0.15);
 }
@@ -62,7 +73,7 @@ button:active{
 .sub-container{
     margin: 0 auto;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 2fr;
     grid-template-rows: auto auto auto auto auto auto;
     grid-gap: 10px;
     max-width: 90%;
@@ -73,20 +84,20 @@ button:active{
 
 .grid{
     padding: 1%;
-    background-color: rgba(255, 255, 255, 0.85);
+    background-color: rgba(255, 255, 255, 0.9);
     box-shadow: 0px 0px 6px 6px rgb(15, 15, 15, 0.3);
     border-radius: 1%;
 }
 
 #sq1{
     font-family: 'Karla';
-    padding-top: 3%;
-    height: 120px;
+    padding-top: 7%;
+    height: 100px;
 }
 #sq2{
     padding-top: 3%;
     grid-row-end: span 4;
-    height: 680px;
+    height: auto;
     text-align: left;
     display: grid;
 }
@@ -105,7 +116,7 @@ button:active{
 }
 
 .img{
-    width: 150px;
+    width: 90%;
     height:150px;
     box-shadow: 0px 0px 6px 6px rgb(15, 15, 15, 0.2);
 }
@@ -127,9 +138,9 @@ label{
     border-bottom: 1px solid;
 }
 
-#smallgrid{
+.smallgrid{
     display: grid;
-    grid-template-columns: auto auto auto;
+    grid-template-columns: 1fr 2fr 1fr;
 }
 #text{
     position: relative;
@@ -146,11 +157,12 @@ label{
     font-family: 'Nunito';
 }
 #mini1:hover, #mini2:hover, #mini3:hover, #mini4:hover{
+    transition: all 200ms;
     box-shadow: 0px 6px 6px 0px rgb(15, 15, 15, 0.3);
     cursor: pointer;
 }
 
-/* styling for block 3 contining dates info/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+/* styling for block 3 containing dates info////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 input[type=date]{
     cursor: pointer;
@@ -171,7 +183,7 @@ select{
     cursor: pointer;
     border: 1px solid rgba(15, 15, 15, 0.1);
     border-radius: 7px;
-    width: 10%;
+    width: 11%;
     height: 35px;
     background-color: rgba(255, 255, 255, 0.2);
     background-position: right;
@@ -227,6 +239,51 @@ input[type="checkbox"]:checked + .box:before{
   border-left-color: transparent;
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
+}
+
+/* media queries////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 1080px){
+
+    .container{
+        padding-top: 8%;
+    }
+
+    .sub-container{
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    nav{
+        background-size: 30% 100%;
+    }
+    
+    nav > ul > li{
+        padding-right: 3%;
+    }
+
+    button {
+        width: 8%;
+    }
+
+}
+
+@media (max-width: 800px){
+
+    .container{
+        padding-top: 10%;
+        max-width: 100%;
+    }
+
+    button {
+        width: 10%;
+    }
+
+    nav{
+        background-size: 35% 100%;
+    }
+
 }
 
 
