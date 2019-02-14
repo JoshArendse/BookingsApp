@@ -3,6 +3,11 @@
 session_start();
 $user = $_SESSION['user'];
 
+if (isset($_POST['logout'])) {
+    session_destroy();
+    header("location: index.php");
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -20,8 +25,8 @@ $user = $_SESSION['user'];
 
     <nav>
         <ul>
-            <li><button type="submit" method="submit" value="submit">Login</button></li>
-            <li><button type="submit" method="submit" value="submit">Register</button></li>
+            <li><a href="/index.php"><button type="submit">Login</button></a></li>
+            <li><a href="/register.php"><button type="submit">Register</button></a></li>
         </ul>
     </nav>
 
@@ -37,7 +42,10 @@ $user = $_SESSION['user'];
 
         <div class="grid" id="sq1">
 
-            <?php echo "You are now logged in as ~". $user = $_SESSION['user']; ?>
+            <form action="home.php" method="post">
+                <?php echo "You are signed in as ~ ". $user = $_SESSION['user'];?><br><br>
+                <button class="logout" type="submit" method="post" name="logout">Logout</button>
+            </form>
 
         </div>
 
@@ -47,52 +55,44 @@ $user = $_SESSION['user'];
 
             <div class="mini" id="mini1">
 
-                <div id="smallgrid">
+                <div class="smallgrid">
                     <div id="block1"><img class="img" src="img/hotel1.jpg" alt="hotel1"></div>
-                    <div id="text">jhiuhiufhieriegejgbir<br>
-                        fweohfuwhfuhwfbsabb<br>
-                        bdegygwyuygdd
+                    <div id="text">Bur Dubai rooms have a modern interior<br> decorated in warm colours.<br> Accommodations have air conditioning,<br> and include satellite TV.<br>
                     </div>
-                    <div id="block3"><span style="color: rgb(109, 59, 245)">The Summer Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R250</span> per night</div>
+                    <div id="block3"><span style="color: rgb(109, 59, 245)">Rose Gold Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R250</span> per night</div>
                 </div>
 
             </div>
 
             <div class="mini" id="mini2">
 
-                <div id="smallgrid">
+                <div class="smallgrid">
                     <div id="block1"><img class="img" src="img/hotel2.jpg" alt="hotel2"></div>
-                    <div id="text">jhiuhiufhieriegejgbir<br>
-                        fweohfuwhfuhwfbsabb<br>
-                        bdegygwyuygdd
+                    <div id="text"> Ultra-modern & Luxury offers. A fitness room,<br> as well as air-conditioned accommodation<br> with free WiFi in Dubai.<br> 2.3 km from City Walk Mall.
                     </div>
-                    <div id="block3"><span style="color: rgb(109, 59, 245)">The Winter Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R350</span> per night</div>
+                    <div id="block3"><span style="color: rgb(109, 59, 245)">9th Cloud Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R350</span> per night</div>
                 </div>
 
             </div>
 
             <div class="mini" id="mini3">
 
-                <div id="smallgrid">
+                <div class="smallgrid">
                     <div id="block1"><img class="img" src="img/hotel3.jpg" alt="hotel3"></div>
-                        <div id="text">jhiuhiufhieriegejgbir<br>
-                        fweohfuwhfuhwfbsabb<br>
-                        bdegygwyuygdd
+                        <div id="text">The units come with parquet flooring<br> and features a fully equipped kitchen,<br> a flat-screen TV with cable and all<br> en suite private bathrooms<br> with towels. 
                         </div>
-                    <div id="block3"><span style="color: rgb(109, 59, 245)">The Spring Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R450</span> per night</div>
+                    <div id="block3"><span style="color: rgb(109, 59, 245)">San Colosseo</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R450</span> per night</div>
                 </div>
 
             </div>
 
             <div class="mini" id="mini4">
 
-                <div id="smallgrid">
+                <div class="smallgrid">
                     <div id="block1"><img class="img" src="img/hotel4.jpg" alt="hotel4"></div>
-                    <div id="text">jhiuhiufhieriegejgbir<br>
-                        fweohfuwhfuhwfbsabb<br>
-                        bdegygwyuygdd
+                    <div id="text">All units come with a living room,<br> a seating area with a sofa, a flat-screen TV,<br> a fully equipped kitchen and a private<br> bathroom.
                     </div>
-                    <div id="block3"><span style="color: rgb(109, 59, 245)">The Autumn Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R550</span> per night</div>
+                    <div id="block3"><span style="color: rgb(109, 59, 245)">Aurora at 12</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R550</span> per night</div>
                 </div>
 
             </div>
@@ -102,8 +102,6 @@ $user = $_SESSION['user'];
         <!-- quadrant 3 containg checkin and check out dates with miscellaneuos feature/s /////////////////////////////////////////////////////////////////////////// -->
 
         <div class="grid" id="sq3">
-
-            <form action="">
 
                 <label for="date">Check-in:</label><br>
                 <input type="date" min="2019-02-14" max="2019-03-14"><br><br>
@@ -120,7 +118,7 @@ $user = $_SESSION['user'];
                 </select><br><br>
                     
                 <label for="no-of-Kids">Number of Kids:</label>
-                <select style="margin-left: 4.5%">
+                <select style="margin-left: 4.8%">
                     <option value="0" selected>0</option>
                     <option value="1">1</option>
                     <option value="2">2</option>
@@ -128,10 +126,6 @@ $user = $_SESSION['user'];
 
                 <input type="checkbox" id="box">
                 <label for="box" class="box">Travelling for work?</label>
-
-
-                
-            </form>
 
         </div>
 
@@ -150,6 +144,7 @@ $user = $_SESSION['user'];
     </div>
 
 </div>
+
     
 </body>
 </html>
