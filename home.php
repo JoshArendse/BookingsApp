@@ -10,6 +10,12 @@ if (isset($_POST['logout'])) {
 
 ?>
 
+<?php 
+
+include_once 'connect3.php';
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -53,49 +59,72 @@ if (isset($_POST['logout'])) {
 
         <div class="grid" id="sq2">
 
-            <div class="mini" id="mini1">
+        <form action="home.php" method="post">
 
-                <div class="smallgrid">
-                    <div id="block1"><img class="img" src="img/hotel1.jpg" alt="hotel1"></div>
-                    <div id="text">Bur Dubai rooms have a modern interior<br> decorated in warm colours.<br> Accommodations have air conditioning,<br> and include satellite TV.<br>
-                    </div>
-                    <div id="block3"><span style="color: rgb(109, 59, 245)">Rose Gold Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R250</span> per night</div>
-                </div>
+            <input type="radio" name="venue" value="Rose Gold Hotel" id="hotel1">
+            <label for="hotel1">
 
-            </div>
+                <div class="mini" id="mini1" name="hotel1">
 
-            <div class="mini" id="mini2">
-
-                <div class="smallgrid">
-                    <div id="block1"><img class="img" src="img/hotel2.jpg" alt="hotel2"></div>
-                    <div id="text"> Ultra-modern & Luxury offers. A fitness room,<br> as well as air-conditioned accommodation<br> with free WiFi in Dubai.<br> 2.3 km from City Walk Mall.
-                    </div>
-                    <div id="block3"><span style="color: rgb(109, 59, 245)">9th Cloud Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R350</span> per night</div>
-                </div>
-
-            </div>
-
-            <div class="mini" id="mini3">
-
-                <div class="smallgrid">
-                    <div id="block1"><img class="img" src="img/hotel3.jpg" alt="hotel3"></div>
-                        <div id="text">The units come with parquet flooring<br> and features a fully equipped kitchen,<br> a flat-screen TV with cable and all<br> en suite private bathrooms<br> with towels. 
+                    <div class="smallgrid">
+                        <div id="block1"><img class="img" src="img/hotel1.jpg" alt="hotel1"></div>
+                        <div id="text">Bur Dubai rooms have a modern interior<br> decorated in warm colours.<br> Accommodations have air conditioning,<br> and include satellite TV.<br>
                         </div>
-                    <div id="block3"><span style="color: rgb(109, 59, 245)">San Colosseo</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R450</span> per night</div>
-                </div>
-
-            </div>
-
-            <div class="mini" id="mini4">
-
-                <div class="smallgrid">
-                    <div id="block1"><img class="img" src="img/hotel4.jpg" alt="hotel4"></div>
-                    <div id="text">All units come with a living room,<br> a seating area with a sofa, a flat-screen TV,<br> a fully equipped kitchen and a private<br> bathroom.
+                        <div id="block3"><span style="color: rgb(109, 59, 245)">Rose Gold Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R1250</span> per night</div>
                     </div>
-                    <div id="block3"><span style="color: rgb(109, 59, 245)">Aurora at 12</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R550</span> per night</div>
+
                 </div>
 
-            </div>
+            </label>
+
+
+            <input type="radio" name="venue" value="9th Cloud Hotel" id="hotel2">
+            <label for="hotel2">
+
+                <div class="mini" id="mini2" name="hotel2">
+
+                    <div class="smallgrid">
+                        <div id="block1"><img class="img" src="img/hotel2.jpg" alt="hotel2"></div>
+                        <div id="text"> Ultra-modern & Luxury offers. A fitness room,<br> as well as air-conditioned accommodation<br> with free WiFi in Dubai.<br> 2.3 km from City Walk Mall.
+                        </div>
+                        <div id="block3"><span style="color: rgb(109, 59, 245)">9th Cloud Hotel</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R980</span> per night</div>
+                    </div>
+
+                </div>
+
+            </label>
+
+            <input type="radio" name="venue" value="San Colosseo" id="hotel3">
+            <label for="hotel3">
+
+                <div class="mini" id="mini3" name="hotel3">
+
+                    <div class="smallgrid">
+                        <div id="block1"><img class="img" src="img/hotel3.jpg" alt="hotel3"></div>
+                            <div id="text">The units come with parquet flooring<br> and features a fully equipped kitchen,<br> a flat-screen TV with cable and all<br> en suite private bathrooms<br> with towels. 
+                            </div>
+                        <div id="block3"><span style="color: rgb(109, 59, 245)">San Colosseo</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R1300</span> per night</div>
+                    </div>
+
+                </div>
+
+            </label>
+
+            <input type="radio" name="venue" value="Aurora at 12" id="hotel4"> 
+            <label for="hotel4">
+
+                <div class="mini" id="mini4" name="hotel4">
+
+                    <div class="smallgrid">
+                        <div id="block1"><img class="img" src="img/hotel4.jpg" alt="hotel4"></div>
+                        <div id="text">All units come with a living room,<br> a seating area with a sofa, a flat-screen TV,<br> a fully equipped kitchen and a private<br> bathroom.
+                        </div>
+                        <div id="block3"><span style="color: rgb(109, 59, 245)">Aurora at 12</span><br><br><br><br><span style="color: rgb(247, 61, 61)">R1950</span> per night</div>
+                    </div>
+
+                </div>
+
+            </label>
 
         </div>
 
@@ -104,10 +133,10 @@ if (isset($_POST['logout'])) {
         <div class="grid" id="sq3">
 
                 <label for="date">Check-in:</label><br>
-                <input type="date" min="2019-02-14" max="2019-03-14"><br><br>
+                <input type="date" min="2019-02-14" max="2019-03-14" name="checkindate" required><br><br>
 
                 <label for="date">Check-out:</label><br>
-                <input type="date" min="2019-02-15" max="2019-03-15"><br><br>
+                <input type="date" min="2019-02-15" max="2019-03-15" name="checkoutdate" required><br><br>
 
                 <label for="no-of-adults">Number of Adults:</label>
                 <select>
@@ -124,7 +153,7 @@ if (isset($_POST['logout'])) {
                     <option value="2">2</option>
                 </select><br><br>
 
-                <input type="checkbox" id="box">
+                <input type="checkbox" id="box" name="business">
                 <label for="box" class="box">Travelling for work?</label>
 
         </div>
@@ -136,13 +165,15 @@ if (isset($_POST['logout'])) {
             <input type="checkbox" id="box-2">
             <label for="box-2" class="box">Would you like FREE wifi?</label>
 
-            <input type="checkbox" id="box-3">
+            <input type="checkbox" id="box-3" name="parking">
             <label for="box-3" class="box">Would like to use underground parking?</label>
+
+            <input type="submit" value="proceed" name="submit">
 
         </div>
 
     </div>
-
+    </form>
 </div>
 
     

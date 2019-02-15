@@ -58,8 +58,8 @@ input[type=text], input[type=password]{
     width: 70%;
     height:35px;
     background-color: rgba(117, 69, 248, 0.2);
-    -moz-box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.15);
+    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(0, 0, 0, 0.15);
 }
 ::placeholder {
     opacity: 0.7;
