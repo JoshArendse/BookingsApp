@@ -22,6 +22,7 @@ if (isset($_POST['login'])) {
             header("refresh: 0;/home.php");
         } else {
             echo "Username or password incorrect";
+            header("refresh: 2;/index.php");
         }
     }
 }

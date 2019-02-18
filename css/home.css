@@ -46,7 +46,7 @@ nav > ul > li{
     color: rgba(255, 255, 255, 0.8);
 }
 
-button {
+button{
     cursor: pointer;
     border: 1px solid rgba(15, 15, 15, 0.1);
     border-radius: 10px;
@@ -56,6 +56,19 @@ button {
     color: rgba(255, 255, 255, 0.8);
 }
 button:active, .logout:active{
+    -moz-box-shadow: inset 0px 0px 10px 10px rgba(255, 255, 255, 0.15);
+    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(255, 255, 255, 0.15);
+}
+.button{
+    cursor: pointer;
+    border: 1px solid rgba(15, 15, 15, 0.1);
+    border-radius: 10px;
+    width: 10%;
+    height: 25px;
+    background-color: rgb(3, 3, 3, 0.9);
+    color: rgba(255, 255, 255, 0.8);
+}
+.button:active{
     -moz-box-shadow: inset 0px 0px 10px 10px rgba(255, 255, 255, 0.15);
     -webkit-box-shadow: inset 0px 0px 10px 10px rgba(255, 255, 255, 0.15);
 }

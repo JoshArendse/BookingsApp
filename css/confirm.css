@@ -1,0 +1,49 @@
+html{
+    scroll-behavior: smooth;
+    padding: 1%;
+}
+
+body{
+    margin: 0 auto;
+    padding: 1%;
+    background-image: url(/img/dubai3.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container{
+    margin: 0 auto;
+    padding: 1%;
+    padding-top: 7%;
+}
+
+.logcont{
+    padding: 1%;
+    margin: 0 auto;
+    width: 320px;
+    height: 460px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 0px 6px 6px rgb(15, 15, 15, 0.2);
+    border-radius: 1%;
+    text-align: center;
+}
+.p{
+    padding-top: 10%;
+    font-size: 28px;
+    color: rgba(0, 0, 0, 0.8);
+    font-family: 'Nunito';
+}
+
+button{
+    border: 1px solid rgba(15, 15, 15, 0.1);
+    border-radius: 10px;
+    width: 30%;
+    height: 35px;
+    background-color: rgb(3, 3, 3, 0.9);
+    color: rgba(255, 255, 255, 0.8);
+}
+button:active{
+    -moz-box-shadow: inset 0px 0px 10px 10px rgba(255, 255, 255, 0.15);
+    -webkit-box-shadow: inset 0px 0px 10px 10px rgba(255, 255, 255, 0.15);
+}

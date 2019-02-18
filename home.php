@@ -27,6 +27,14 @@ include_once 'connect3.php';
     <link href="https://fonts.googleapis.com/css?family=Karla|Nunito" rel="stylesheet">
     <title>Don't Tell</title>
 </head>
+<?php 
+    if (isset($_POST['submit'])) {
+        $_SESSION['venue'] = $_POST['venue'];
+        $_SESSION['checkindate'] = $_POST['checkindate'];
+        $_SESSION['checkoutdate'] = $_POST['checkoutdate'];
+        header("Location: confirm.php");
+    } 
+?>
 <body>
 
     <nav>
@@ -61,7 +69,7 @@ include_once 'connect3.php';
 
         <form action="home.php" method="post">
 
-            <input type="radio" name="venue" value="Rose Gold Hotel" id="hotel1">
+            <input type="radio" name="venue" value="Rose Gold Hotel" id="hotel1" required>
             <label for="hotel1">
 
                 <div class="mini" id="mini1" name="hotel1">
@@ -78,7 +86,7 @@ include_once 'connect3.php';
             </label>
 
 
-            <input type="radio" name="venue" value="9th Cloud Hotel" id="hotel2">
+            <input type="radio" name="venue" value="9th Cloud Hotel" id="hotel2" required>
             <label for="hotel2">
 
                 <div class="mini" id="mini2" name="hotel2">
@@ -94,7 +102,7 @@ include_once 'connect3.php';
 
             </label>
 
-            <input type="radio" name="venue" value="San Colosseo" id="hotel3">
+            <input type="radio" name="venue" value="San Colosseo" id="hotel3" required>
             <label for="hotel3">
 
                 <div class="mini" id="mini3" name="hotel3">
@@ -110,7 +118,7 @@ include_once 'connect3.php';
 
             </label>
 
-            <input type="radio" name="venue" value="Aurora at 12" id="hotel4"> 
+            <input type="radio" name="venue" value="Aurora at 12" id="hotel4" required> 
             <label for="hotel4">
 
                 <div class="mini" id="mini4" name="hotel4">
@@ -133,10 +141,10 @@ include_once 'connect3.php';
         <div class="grid" id="sq3">
 
                 <label for="date">Check-in:</label><br>
-                <input type="date" min="2019-02-14" max="2019-03-14" name="checkindate" required><br><br>
+                <input type="date" min="2019-03-01" max="2019-03-29" name="checkindate" required><br><br>
 
                 <label for="date">Check-out:</label><br>
-                <input type="date" min="2019-02-15" max="2019-03-15" name="checkoutdate" required><br><br>
+                <input type="date" min="2019-03-02" max="2019-03-30" name="checkoutdate" required><br><br>
 
                 <label for="no-of-adults">Number of Adults:</label>
                 <select>
@@ -162,18 +170,20 @@ include_once 'connect3.php';
 
         <div class="grid" id="sq4">
 
-            <input type="checkbox" id="box-2">
+            <input type="checkbox" id="box-2" name="wifi">
             <label for="box-2" class="box">Would you like FREE wifi?</label>
 
             <input type="checkbox" id="box-3" name="parking">
             <label for="box-3" class="box">Would like to use underground parking?</label>
 
-            <input type="submit" value="proceed" name="submit">
+            <input class="button" type="submit" value="Proceed" name="submit">
 
         </div>
 
     </div>
     </form>
+
+    
 </div>
 
     
