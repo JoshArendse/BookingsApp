@@ -1,6 +1,6 @@
 # PHP Bookings App
 
- - Final PHP project for the course based on scripting languages: PHP and MySQL(Please note, responsive for tablet only, mobile update coming soon)
+ - Final PHP project for the course based on scripting languages: PHP and MySQL (Mobile Update Implimented)
 
 ### How to view this project:
 

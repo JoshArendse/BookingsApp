@@ -296,6 +296,8 @@ input[type=radio]:checked + label .mini {
 
 }
 
+/* query for tablet/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
 @media (max-width: 800px){
 
     .container{
@@ -306,12 +308,52 @@ input[type=radio]:checked + label .mini {
     button {
         width: 10%;
     }
+    .button{
+        width: 13%;
+    }
 
     nav{
         background-size: 35% 100%;
     }
 
 }
+
+/* query for mobile/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */
+
+@media (max-width: 620px){
+
+    .container{
+        padding-top: 18%;
+
+    }
+
+    .sub-container{
+        max-width: 98%;
+    }
+
+    nav{
+        background-size: 53% 100%;
+    }
+
+    button {
+        width: 20%;
+    }
+    .button{
+        width: 21%;
+    }
+    
+    .smallgrid{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #text{
+        display: none;
+    }
+
+}
+
+
 
 
 
